@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300&display=swap");
+* {
+  font-family: "Manrope", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(218, 23%, 16%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.advice-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 450px;
+  width: 90%;
+  background-color: hsl(217, 19%, 24%);
+  border-radius: 0.5rem;
+  text-align: center;
+  position: relative;
+}
+.advice-container .loading {
+  background-color: hsl(217, 19%, 38%);
+  min-height: 30px;
+  position: relative;
+  border-radius: 0.5rem;
+}
+.advice-container .loading::before {
+  content: " ";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, #4f5a6a, transparent);
+  transform: translateX(-100%);
+  animation: loader 1s infinite;
+}
+@keyframes loader {
+  100% {
+    transform: translateX(100%);
+  }
+}
+.advice-container .ID {
+  width: 120px;
+  margin-top: 30px;
+  font-weight: bold;
+  font-size: 0.8rem;
+  color: hsl(150, 100%, 66%);
+}
+.advice-container .text {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 80%;
+  font-weight: bolder;
+  color: hsl(193, 38%, 86%);
+}
+.advice-container .desktop-svg {
+  display: block;
+  width: 80%;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+.advice-container .mobile-svg {
+  display: none;
+}
+.advice-container .btn {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: hsl(150, 100%, 66%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  transform: translate(50%, 50%);
+}
+.advice-container .btn:hover {
+  color: white;
+  box-shadow: 0 5px 15px hsla(150, 100%, 66%, 0.4);
+}
+
+@media screen and (max-width: 400px) {
+  .desktop-svg {
+    display: none;
+  }
+  .mobile-svg {
+    display: block;
+    width: 80%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}/*# sourceMappingURL=Sass.css.map */
